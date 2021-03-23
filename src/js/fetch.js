@@ -29,13 +29,20 @@ function onLoadMore() {
     .then(hits => {
       const markup = imgCardTpl(hits);
       galleryRef.insertAdjacentHTML('beforeend', markup);
-      console.log('cgcbgfhj');
-      window.scrollBy({
-        top: 800,
-        behavior: 'smooth',
-      });
+      scrollToNewElements();
     })
     .catch(error => {
       console.log(error);
     });
+}
+
+function scrollToNewElements() {
+  const totalScrollHeight = window.innerHeight - 57;
+  console.log(totalScrollHeight);
+  setTimeout(() => {
+    window.scrollBy({
+      top: totalScrollHeight,
+      behavior: 'smooth',
+    });
+  }, 500);
 }
