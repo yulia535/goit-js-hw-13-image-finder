@@ -27,12 +27,9 @@ li {
   margin: auto;
 }
 input {
-  width: 100%;
   font-size: 20px;
 }
 button {
-  display: block;
-  margin: auto;
   font-size: 20px;
   font-weight: bold;
   color: rgb(68, 68, 68);
@@ -42,6 +39,10 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   background: rgb(119, 134, 184);
+}
+.btn-load-more {
+  display: block;
+  margin: auto;
 }
 button:hover {
   background: rgb(103, 161, 209);
