@@ -6,6 +6,8 @@ const seachFormRef = document.querySelector('#search-form');
 const btnLoadMoreRef = document.querySelector('.btn-load-more');
 const newsApiService = new NewsApiService();
 
+const scrollHeight = window.innerHeight - 57;
+
 seachFormRef.addEventListener('submit', onSearch);
 btnLoadMoreRef.addEventListener('click', onLoadMore);
 
@@ -37,11 +39,9 @@ function onLoadMore() {
 }
 
 function scrollToNewElements() {
-  const totalScrollHeight = window.innerHeight - 57;
-  console.log(totalScrollHeight);
   setTimeout(() => {
     window.scrollBy({
-      top: totalScrollHeight,
+      top: scrollHeight,
       behavior: 'smooth',
     });
   }, 500);
